@@ -48,3 +48,13 @@ and to use solidity we have to install remix ide or we can use it online by visi
        }
 
        }
+
+Author
+
+Rakshita Thakur
+
+thakurrakshita067@gmail.com
+
+License
+
+This project is licensed under the MIT License - see the LICENSE.md file for details
