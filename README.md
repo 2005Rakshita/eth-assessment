@@ -27,23 +27,20 @@ and to use solidity we have to install remix ide or we can use it online by visi
        contract MyToken {
 
        // public variables here
-       struct details{
-       string token_name;
-       string token_abbrv;
-       uint total_supply;
-       }
-       details public tokens;
+       string public token_name="Azure";
+       string public token_abbrv="Ar";
+        uint public total_supply=100;
 
     
        mapping (address=>uint) public balance;
  
        function mint(address adr, uint value) public {
-       tokens.total_supply+=value;
+       total_supply+=value;
        balance[adr]+=value;
        }
 
        function burn(address adr, uint value) public {
-       tokens.total_supply-=value;
+       total_supply-=value;
        balance[adr]-=value;
        }
 
