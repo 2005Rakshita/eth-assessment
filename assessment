@@ -18,23 +18,20 @@ pragma solidity 0.8.25;
 contract MyToken {
 
     // public variables here
-    struct details{
-       string token_name;
-       string token_abbrv;
-       uint total_supply;
-    }
-    details public tokens;
+    string public token_name="Azure";
+    string public token_abbrv="Ar";
+    uint public total_supply=100;
 
     // mapping variable here
    mapping (address=>uint) public balance;
     // mint function
     function mint(address adr, uint value) public {
-       tokens.total_supply+=value;
+      total_supply+=value;
        balance[adr]+=value;
     }
     // burn function
     function burn(address adr, uint value) public {
-       tokens.total_supply-=value;
+       total_supply-=value;
        balance[adr]-=value;
     }
 
